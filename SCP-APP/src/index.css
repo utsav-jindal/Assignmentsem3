@@ -1,72 +1,118 @@
-/* src/index.css */
-
-/* Reset & base */
+/* Reset & Base Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
 }
 
 body {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  /* Background with image + gradient overlay */
-  background: linear-gradient(
-      rgba(0, 0, 0, 0.6), 
-      rgba(0, 0, 0, 0.6)
-    ),
-    url("https://images.unsplash.com/photo-1529119368496-3e76b2e1c1a2") no-repeat center center fixed;
-  background-size: cover;
-  color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: #e0e0e0;
+  min-height: 100vh;
+  line-height: 1.6;
 }
 
-#root {
-  width: 90%;
-  max-width: 1000px;
-  min-height: 500px;
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(12px);
-  border-radius: 20px;
-  padding: 2rem;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
-  animation: fadeInUp 1s ease-out;
-}
-
-h1, h2, h3 {
+/* Header */
+header {
+  width: 100%;
   text-align: center;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+  padding: 2rem 1rem;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(5px);
+  border-bottom: 2px solid #ff0000;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #ff3c00;
+  text-shadow: 0 0 10px #ff3c00;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #ffffffaa;
+}
+
+.logos {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.2);
+}
+
+/* Main Content */
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  width: 100%;
+  min-height: 60vh;
+}
+
+.card {
+  background: rgba(0, 0, 0, 0.75);
+  border: 2px solid #ff3c00;
+  border-radius: 16px;
+  padding: 2rem;
+  margin-top: 2rem;
+  max-width: 600px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px #ff3c00aa;
 }
 
 button {
-  padding: 12px 20px;
+  background-color: #ff3c00;
   border: none;
-  border-radius: 12px;
-  background: linear-gradient(135deg, #ff4d4d, #6600ff);
-  color: white;
-  font-size: 1rem;
+  border-radius: 8px;
+  padding: 0.8rem 1.5rem;
+  color: #fff;
+  font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
 }
 
 button:hover {
-  transform: scale(1.08);
-  background: linear-gradient(135deg, #ff0000, #3300cc);
-  box-shadow: 0 0 20px rgba(255, 77, 77, 0.8);
+  background-color: #ff5500;
+  transform: scale(1.05);
 }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: auto;
+  padding: 1rem;
+  color: #ffffffaa;
+  border-top: 2px solid #ff0000;
+  width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .card {
+    width: 90%;
+    padding: 1.5rem;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  
+  header h1 {
+    font-size: 2rem;
   }
 }
