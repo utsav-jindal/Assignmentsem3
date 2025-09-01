@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SCP Portal</title>
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+
+    <!-- Advanced CSS -->
+    <style>
+      /* --- Reset & Fonts --- */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+        color: #e0e0e0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      /* --- Header --- */
+      header {
+        width: 100%;
+        text-align: center;
+        padding: 2rem 1rem;
+        background: rgba(0, 0, 0, 0.75);
+        backdrop-filter: blur(5px);
+        border-bottom: 2px solid #ff0000;
+      }
+
+      header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+        color: #ff3c00;
+        text-shadow: 0 0 10px #ff3c00;
+      }
+
+      header p {
+        font-size: 1.2rem;
+        color: #ffffffaa;
+      }
+
+      .logos {
+        margin-top: 1rem;
+      }
+
+      .logo {
+        width: 50px;
+        margin: 0 10px;
+        transition: transform 0.3s ease;
+      }
+
+      .logo:hover {
+        transform: scale(1.2);
+      }
+
+      /* --- Main Content --- */
+      .App {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+        width: 100%;
+      }
+
+      .card {
+        background: rgba(0, 0, 0, 0.75);
+        border: 2px solid #ff3c00;
+        border-radius: 16px;
+        padding: 2rem;
+        margin-top: 2rem;
+        max-width: 600px;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0 20px #ff3c00aa;
+      }
+
+      button {
+        background-color: #ff3c00;
+        border: none;
+        border-radius: 8px;
+        padding: 0.8rem 1.5rem;
+        color: #fff;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #ff5500;
+        transform: scale(1.05);
+      }
+
+      .read-the-docs {
+        margin-top: 1rem;
+        font-size: 1rem;
+        color: #ffffffaa;
+      }
+
+      /* --- Footer --- */
+      footer {
+        text-align: center;
+        margin-top: 3rem;
+        padding: 1rem;
+        color: #ffffffaa;
+        border-top: 2px solid #ff0000;
+        width: 100%;
+      }
+
+      /* --- Responsive --- */
+      @media (max-width: 768px) {
+        .card {
+          width: 90%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
